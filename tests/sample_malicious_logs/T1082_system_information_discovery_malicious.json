@@ -1,8 +1,10 @@
 {
   "EventID": 1,
+  "UtcTime": "2026-11-15 12:46:54.030",
   "Image": "C:\\Windows\\System32\\systeminfo.exe",
-  "CommandLine": "systeminfo.exe",
+  "CommandLine": "systeminfo  ",
   "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-  "User": "VICTIM-PC\\analyst",
-  "_provenance": "synthetic"
+  "User": "WIN10-LAB\\analyst",
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1082 (captured via Sysmon)"
 }

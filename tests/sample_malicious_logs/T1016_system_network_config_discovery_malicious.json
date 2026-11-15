@@ -1,8 +1,10 @@
 {
   "EventID": 1,
-  "Image": "C:\\Windows\\System32\\ipconfig.exe",
-  "CommandLine": "ipconfig.exe /all",
+  "UtcTime": "2026-11-15 12:38:41.453",
+  "Image": "C:\\Windows\\System32\\ARP.EXE",
+  "CommandLine": "arp  -a",
   "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-  "User": "VICTIM-PC\\analyst",
-  "_provenance": "synthetic"
+  "User": "WIN10-LAB\\analyst",
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1016 (captured via Sysmon)"
 }

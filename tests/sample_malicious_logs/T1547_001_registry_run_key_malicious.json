@@ -1,8 +1,11 @@
 {
   "EventID": 13,
+  "UtcTime": "2026-11-15 12:29:34.786",
+  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "User": "WIN10-LAB\\analyst",
+  "TargetObject": "HKU\\S-1-5-21-1668412307-2336561842-2786590-1001\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\socks5_powershell",
+  "Details": "powershell.exe -windowstyle hidden -ExecutionPolicy Bypass -File",
   "EventType": "SetValue",
-  "TargetObject": "HKU\\S-1-5-21-111\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\Updater",
-  "Details": "powershell.exe -w hidden -ep bypass -File C:\\Users\\Public\\run.ps1",
-  "Image": "C:\\Windows\\System32\\reg.exe",
-  "_provenance": "synthetic"
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1547.001 (captured via Sysmon)"
 }

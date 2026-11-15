@@ -1,8 +1,10 @@
 {
   "EventID": 1,
+  "UtcTime": "2026-11-15 12:35:10.081",
   "Image": "C:\\Windows\\System32\\certutil.exe",
-  "CommandLine": "certutil.exe -decode C:\\Users\\Public\\enc.txt C:\\Users\\Public\\payload.exe",
+  "CommandLine": "certutil  -decode C:\\Users\\analyst\\AppData\\Local\\Temp\\T1140_calc.txt C:\\Users\\analyst\\AppData\\Local\\Temp\\T1140_calc_decoded.exe",
   "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-  "User": "VICTIM-PC\\analyst",
-  "_provenance": "synthetic"
+  "User": "WIN10-LAB\\analyst",
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1140 (captured via Sysmon)"
 }

@@ -1,8 +1,10 @@
 {
   "EventID": 1,
+  "UtcTime": "2026-11-15 12:31:51.619",
   "Image": "C:\\Windows\\System32\\cmd.exe",
-  "CommandLine": "cmd.exe /c powershell -NoProfile -Command Start-Process cmd -Verb RunAs",
+  "CommandLine": "\"C:\\Windows\\System32\\cmd.exe\" ",
   "ParentImage": "C:\\Windows\\System32\\fodhelper.exe",
-  "User": "VICTIM-PC\\analyst",
-  "_provenance": "synthetic"
+  "User": "WIN10-LAB\\analyst",
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1548.002 (captured via Sysmon)"
 }

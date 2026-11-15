@@ -121,14 +121,16 @@ tests and carry a `_provenance` field:
 
 - **`real-capture`** — exported from **Sysmon** on a Windows 10 VirtualBox lab VM after
   actually running the atomic with `Invoke-AtomicTest`, then sanitized (lab
-  hostname/user) and curated to the triggering event. Currently 6 techniques
-  (T1003.001, T1053.005, T1059.001, T1105, T1218.010, T1490) — e.g. a genuine
-  `rundll32 comsvcs.dll MiniDump` against LSASS and a real PowerSploit download cradle.
+  hostname/user) and curated to the triggering event. Currently **20 of 26 techniques** —
+  e.g. a genuine `rundll32 comsvcs.dll MiniDump` against LSASS, a real PowerSploit
+  download cradle, a fodhelper UAC bypass, and live discovery/LOLBin execution
+  (wmic, mshta, rundll32, certutil, bitsadmin).
 - **`synthetic`** — authored field-for-field from the atomic's documented command line.
   Used where the technique's atomic performs its action **in-process** (e.g. PowerShell
   `Clear-EventLog` / `Set-MpPreference` spawn no child process, so there is no distinct
-  Sysmon process-creation event to capture) or where running the live payload adds no
-  signal beyond the command line the rule keys on.
+  Sysmon process-creation event to capture), where the Office-macro parent lineage
+  can't be reproduced by the atomic alone (T1059.003), or where the live atomic uses a
+  different mechanism than the rule keys on (T1021.001, T1112).
 
 `scripts/capture/` and `scripts/capture/Capture-AtomicLogs.ps1` automate this loop. It is:
 

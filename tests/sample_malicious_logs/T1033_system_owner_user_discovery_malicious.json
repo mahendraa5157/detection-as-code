@@ -1,8 +1,10 @@
 {
   "EventID": 1,
+  "UtcTime": "2026-11-15 12:40:22.726",
   "Image": "C:\\Windows\\System32\\whoami.exe",
-  "CommandLine": "whoami.exe /all",
+  "CommandLine": "whoami  /all",
   "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-  "User": "VICTIM-PC\\analyst",
-  "_provenance": "synthetic"
+  "User": "WIN10-LAB\\analyst",
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1033 (captured via Sysmon)"
 }

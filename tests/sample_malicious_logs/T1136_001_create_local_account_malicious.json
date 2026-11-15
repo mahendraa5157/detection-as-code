@@ -1,8 +1,10 @@
 {
   "EventID": 1,
+  "UtcTime": "2026-11-15 12:29:14.101",
   "Image": "C:\\Windows\\System32\\net.exe",
-  "CommandLine": "net.exe user backdoor P@ssw0rd123! /add",
+  "CommandLine": "net  user /add \"T1136.001_Admin\" \"T1136_pass\" ",
   "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-  "User": "VICTIM-PC\\analyst",
-  "_provenance": "synthetic"
+  "User": "WIN10-LAB\\analyst",
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1136.001 (captured via Sysmon)"
 }

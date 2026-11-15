@@ -1,8 +1,10 @@
 {
   "EventID": 1,
+  "UtcTime": "2026-11-15 12:40:28.181",
   "Image": "C:\\Windows\\System32\\tasklist.exe",
-  "CommandLine": "tasklist.exe /v /fo csv",
+  "CommandLine": "tasklist",
   "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-  "User": "VICTIM-PC\\analyst",
-  "_provenance": "synthetic"
+  "User": "WIN10-LAB\\analyst",
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1057 (captured via Sysmon)"
 }
