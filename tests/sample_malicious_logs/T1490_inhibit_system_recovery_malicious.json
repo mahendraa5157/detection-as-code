@@ -1,8 +1,10 @@
 {
   "EventID": 1,
-  "Image": "C:\\Windows\\System32\\vssadmin.exe",
-  "CommandLine": "vssadmin.exe delete shadows /all /quiet",
+  "UtcTime": "2026-11-15 12:22:20.232",
+  "Image": "C:\\Windows\\System32\\wbadmin.exe",
+  "CommandLine": "wbadmin  delete catalog -quiet",
   "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-  "User": "VICTIM-PC\\analyst",
-  "_provenance": "synthetic"
+  "User": "WIN10-LAB\\analyst",
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1490 (captured via Sysmon)"
 }

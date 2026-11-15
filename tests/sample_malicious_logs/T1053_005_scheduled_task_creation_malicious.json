@@ -1,8 +1,10 @@
 {
   "EventID": 1,
+  "UtcTime": "2026-11-15 12:16:24.623",
   "Image": "C:\\Windows\\System32\\schtasks.exe",
-  "CommandLine": "schtasks.exe /create /tn \"ATOMIC-T1053.005\" /tr \"C:\\Users\\Public\\beacon.exe\" /sc onlogon /ru SYSTEM",
+  "CommandLine": "schtasks  /create /TN \"ProactiveScan\" /TR \"wscript.exe \\\"C:\\Users\\analyst\\AppData\\Roaming\\Microsoft\\Chkdsk.js\\\" -scan Kdw6gG7cpOSZsBeH\" /SC ONLOGON /F",
   "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-  "User": "VICTIM-PC\\analyst",
-  "_provenance": "synthetic"
+  "User": "WIN10-LAB\\analyst",
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1053.005 (captured via Sysmon)"
 }

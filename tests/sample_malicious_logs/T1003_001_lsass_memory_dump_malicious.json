@@ -1,8 +1,10 @@
 {
   "EventID": 1,
+  "UtcTime": "2026-11-15 12:18:47.448",
   "Image": "C:\\Windows\\System32\\rundll32.exe",
-  "CommandLine": "rundll32.exe C:\\Windows\\System32\\comsvcs.dll, MiniDump 648 C:\\Users\\Public\\lsass.dmp full",
-  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-  "User": "VICTIM-PC\\analyst",
-  "_provenance": "synthetic"
+  "CommandLine": "\"C:\\Windows\\System32\\rundll32.exe\" C:\\windows\\System32\\comsvcs.dll MiniDump 780 C:\\Users\\analyst\\AppData\\Local\\Temp\\lsass-comsvcs.dmp full",
+  "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "User": "WIN10-LAB\\analyst",
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1003.001 (captured via Sysmon)"
 }

