@@ -12,8 +12,6 @@ unit tests** against sample Sysmon logs, honest **false-positive notes**, and a
 
 ## Why this exists
 
-Most "SOC home lab" portfolios stop at *"I installed Splunk, ran an atomic, and saw an
-alert once."* That proves a tool works — not that **you** can engineer detections.
 
 This repo is built like a real detection-engineering workflow:
 
