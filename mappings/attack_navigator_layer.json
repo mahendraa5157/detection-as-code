@@ -1,0 +1,373 @@
+{
+  "name": "Detection-as-Code Coverage",
+  "versions": {
+    "attack": "14",
+    "navigator": "4.9.1",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques covered by Sigma rules in mahendraa5157/detection-as-code. Score = number of rules mapped to the technique.",
+  "sorting": 3,
+  "techniques": [
+    {
+      "techniqueID": "T1003.001",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "LSASS Memory Dump Via Comsvcs Or Procdump",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1016",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "System Network Configuration Discovery",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1021.001",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Remote Desktop Enabled Via Registry From Command Line",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1027",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Obfuscated PowerShell Via Stacked Evasion Flags",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1033",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "System Owner/User Discovery Via Whoami",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1047",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "WMI Process Creation Via Wmic",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1053.005",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Scheduled Task Creation Via Schtasks",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1057",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Process Discovery Via Tasklist Or Get-Process",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1059.001",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "PowerShell Execution Of Offensive Tooling Or Encoded Commands",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1059.003",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Suspicious Windows Command Shell Child Of Office Application",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1069.001",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Local Permission Group Discovery",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1070.001",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Windows Event Log Cleared Via Wevtutil Or PowerShell",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1082",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "System Information Discovery Via Systeminfo",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1087.001",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Local Account Discovery Via Net User",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1105",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Ingress Tool Transfer Via Certutil Or Bitsadmin Download",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1112",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Registry Tampering To Disable Security Controls",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1136.001",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Local Account Creation Via Net User",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1140",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Deobfuscate/Decode Files Via Certutil Decode",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1197",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "BITS Job Used For Download Or Persistence",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1218.005",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Mshta Execution Of Remote Or Inline Script",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1218.010",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Regsvr32 Squiblydoo Scriptlet Execution",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1218.011",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Rundll32 Proxy Execution Of Suspicious Payloads",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1490",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Inhibit System Recovery Via Shadow Copy Deletion",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1547.001",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Persistence Via Registry Run Key Modification",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1548.002",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "UAC Bypass Via Fodhelper Registry Hijack",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1562.001",
+      "score": 1,
+      "color": "#9fd8a3",
+      "comment": "Impair Defenses - Disable Microsoft Defender",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "rules",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#9fd8a3",
+      "#1f6b40"
+    ],
+    "minValue": 1,
+    "maxValue": 3
+  },
+  "legendItems": [
+    {
+      "label": "1 rule",
+      "color": "#9fd8a3"
+    },
+    {
+      "label": "2 rules",
+      "color": "#52b36a"
+    },
+    {
+      "label": "3+ rules",
+      "color": "#1f6b40"
+    }
+  ]
+}
