@@ -1,0 +1,4 @@
+* text=auto eol=lf
+venv/ export-ignore
+*.png binary
+*.svg text eol=lf

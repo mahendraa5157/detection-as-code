@@ -1,0 +1,16 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+
+# Local scratch
+*.tmp
+table_fragment.md

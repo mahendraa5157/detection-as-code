@@ -1,0 +1,9 @@
+# Core — rule parsing, conversion, and tests
+pySigma==1.5.1
+sigma-cli==3.1.0
+pySigma-backend-elasticsearch==2.1.1
+pySigma-pipeline-sysmon==2.0.0
+pySigma-pipeline-windows==2.0.1
+PyYAML==6.0.3
+pytest==9.1.1
+yamllint==1.38.0

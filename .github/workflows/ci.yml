@@ -1,0 +1,44 @@
+name: Detection-as-Code CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Lint YAML (rules + emulation maps)
+        run: python -m yamllint -c .yamllint.yml rules/ emulation/
+
+      - name: Validate Sigma rules (metadata + backend compile)
+        run: python scripts/run_sigma_validate.py
+
+      - name: Run rule logic tests (positive + benign-negative)
+        run: python -m pytest tests/ -q
+
+      - name: Regenerate ATT&CK coverage heatmap
+        run: python scripts/build_coverage_heatmap.py
+
+      - name: Fail if coverage artifacts are stale (commit them)
+        run: |
+          if ! git diff --quiet -- mappings/attack_navigator_layer.json docs/coverage_heatmap.svg docs/coverage_summary.md; then
+            echo "::error::Coverage artifacts are out of date. Run 'python scripts/build_coverage_heatmap.py' and commit the result."
+            git --no-pager diff --stat -- mappings/ docs/
+            exit 1
+          fi
+          echo "Coverage artifacts are up to date."
