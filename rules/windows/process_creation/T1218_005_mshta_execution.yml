@@ -1,0 +1,29 @@
+title: Mshta Execution Of Remote Or Inline Script
+id: 7a385a7b-32a1-5027-8323-8eca33d77224
+status: experimental
+description: Detects mshta.exe executing remote HTA or inline vbscript/javascript (Atomic T1218.005).
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1218/005/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.defense_evasion
+    - attack.t1218.005
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith: '\\mshta.exe'
+    selection_sus:
+        CommandLine|contains:
+            - 'http://'
+            - 'https://'
+            - 'javascript:'
+            - 'vbscript:'
+            - '.hta'
+    condition: selection and selection_sus
+falsepositives:
+    - Legacy line-of-business apps delivered as signed local .hta files.
+level: high

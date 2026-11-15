@@ -1,0 +1,8 @@
+{
+  "EventID": 1,
+  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "CommandLine": "powershell.exe Set-MpPreference -DisableRealtimeMonitoring $true",
+  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+  "User": "VICTIM-PC\\analyst",
+  "_provenance": "synthetic"
+}

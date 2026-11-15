@@ -1,0 +1,6 @@
+technique: 'T1112'
+rule: 'rules/windows/process_creation/T1112_modify_registry_disable_security.yml'
+atomic_test:
+    name: 'Disable UAC via registry'
+    auto_generated_guid_or_num: 'T1112-1'
+    example_command: 'reg add ...\System /v EnableLUA /d 0 /f'

@@ -1,0 +1,6 @@
+technique: 'T1069.001'
+rule: 'rules/windows/process_creation/T1069_001_local_group_discovery.yml'
+atomic_test:
+    name: 'Group discovery'
+    auto_generated_guid_or_num: 'T1069.001-1'
+    example_command: 'net localgroup administrators'

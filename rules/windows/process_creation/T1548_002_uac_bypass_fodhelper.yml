@@ -1,0 +1,26 @@
+title: UAC Bypass Via Fodhelper Registry Hijack
+id: 97cd1277-73cc-5be7-84dc-92bfd090f37c
+status: experimental
+description: Detects the fodhelper.exe UAC bypass launching a child process, following a ms-settings registry hijack (Atomic T1548.002).
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1548/002/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.privilege_escalation
+    - attack.t1548.002
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        ParentImage|endswith: '\\fodhelper.exe'
+    filter_legit:
+        Image|endswith:
+            - '\\SystemSettings.exe'
+            - '\\RuntimeBroker.exe'
+    condition: selection and not filter_legit
+falsepositives:
+    - Normal fodhelper usage spawns SystemSettings-related processes, which are filtered out.
+level: high

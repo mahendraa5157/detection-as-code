@@ -1,0 +1,6 @@
+technique: 'T1218.005'
+rule: 'rules/windows/process_creation/T1218_005_mshta_execution.yml'
+atomic_test:
+    name: 'mshta remote'
+    auto_generated_guid_or_num: 'T1218.005-1'
+    example_command: 'mshta vbscript:...http://.../a.sct'

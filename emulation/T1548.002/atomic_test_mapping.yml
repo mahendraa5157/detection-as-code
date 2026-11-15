@@ -1,0 +1,6 @@
+technique: 'T1548.002'
+rule: 'rules/windows/process_creation/T1548_002_uac_bypass_fodhelper.yml'
+atomic_test:
+    name: 'fodhelper UAC bypass'
+    auto_generated_guid_or_num: 'T1548.002-3'
+    example_command: 'fodhelper.exe (after ms-settings hijack)'

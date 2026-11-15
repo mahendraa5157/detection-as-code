@@ -1,0 +1,8 @@
+{
+  "EventID": 1,
+  "Image": "C:\\Windows\\System32\\rundll32.exe",
+  "CommandLine": "rundll32.exe C:\\Windows\\System32\\shell32.dll,Control_RunDLL desk.cpl",
+  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+  "User": "VICTIM-PC\\analyst",
+  "_provenance": "synthetic"
+}

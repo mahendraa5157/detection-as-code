@@ -1,0 +1,6 @@
+technique: 'T1105'
+rule: 'rules/windows/process_creation/T1105_ingress_tool_transfer_certutil.yml'
+atomic_test:
+    name: 'certutil download'
+    auto_generated_guid_or_num: 'T1105-1'
+    example_command: 'certutil -urlcache -f http://.../file'

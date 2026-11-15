@@ -1,0 +1,30 @@
+title: System Owner/User Discovery Via Whoami
+id: 1effeb24-d875-5f36-8d47-9ff3a14fce44
+status: experimental
+description: Detects identity reconnaissance via whoami /all /groups /priv and query user (Atomic T1033).
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1033/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.discovery
+    - attack.t1033
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection_whoami:
+        Image|endswith: '\\whoami.exe'
+        CommandLine|contains:
+            - '/all'
+            - '/groups'
+            - '/priv'
+    selection_query:
+        Image|endswith: '\\query.exe'
+        CommandLine|contains: 'user'
+    condition: selection_whoami or selection_query
+falsepositives:
+    - Admins and support staff verifying identity and privileges.
+    - Login scripts that log the current user context.
+level: low

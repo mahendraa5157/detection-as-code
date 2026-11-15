@@ -1,0 +1,6 @@
+technique: 'T1047'
+rule: 'rules/windows/process_creation/T1047_wmi_process_create.yml'
+atomic_test:
+    name: 'wmic exec'
+    auto_generated_guid_or_num: 'T1047-1'
+    example_command: 'wmic process call create "<cmd>"'

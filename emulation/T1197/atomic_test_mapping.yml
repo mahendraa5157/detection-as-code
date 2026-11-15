@@ -1,0 +1,6 @@
+technique: 'T1197'
+rule: 'rules/windows/process_creation/T1197_bits_jobs.yml'
+atomic_test:
+    name: 'BITS job'
+    auto_generated_guid_or_num: 'T1197-1'
+    example_command: 'bitsadmin /transfer ... http://...'

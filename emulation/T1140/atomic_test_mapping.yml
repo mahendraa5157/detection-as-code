@@ -1,0 +1,6 @@
+technique: 'T1140'
+rule: 'rules/windows/process_creation/T1140_deobfuscate_certutil_decode.yml'
+atomic_test:
+    name: 'certutil decode'
+    auto_generated_guid_or_num: 'T1140-1'
+    example_command: 'certutil -decode enc.txt out.exe'

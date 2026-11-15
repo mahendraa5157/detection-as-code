@@ -1,0 +1,8 @@
+{
+  "EventID": 1,
+  "Image": "C:\\Windows\\System32\\wbem\\WMIC.exe",
+  "CommandLine": "wmic.exe logicaldisk get caption,freespace,size",
+  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+  "User": "VICTIM-PC\\analyst",
+  "_provenance": "synthetic"
+}

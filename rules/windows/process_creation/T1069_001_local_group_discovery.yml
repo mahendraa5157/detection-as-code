@@ -1,0 +1,27 @@
+title: Local Permission Group Discovery
+id: 7f8196d8-b082-5a1c-9c6b-2cd683145368
+status: experimental
+description: Detects enumeration of local groups, especially Administrators, via net localgroup (Atomic T1069.001).
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1069/001/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.discovery
+    - attack.t1069.001
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith:
+            - '\\net.exe'
+            - '\\net1.exe'
+        CommandLine|contains: 'localgroup'
+    filter_add:
+        CommandLine|contains: '/add'
+    condition: selection and not filter_add
+falsepositives:
+    - Admin scripts auditing group membership.
+level: low

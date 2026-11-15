@@ -1,0 +1,6 @@
+technique: 'T1033'
+rule: 'rules/windows/process_creation/T1033_system_owner_user_discovery.yml'
+atomic_test:
+    name: 'Whoami discovery'
+    auto_generated_guid_or_num: 'T1033-1'
+    example_command: 'whoami /all'

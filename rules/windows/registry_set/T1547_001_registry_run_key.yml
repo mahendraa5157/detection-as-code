@@ -1,0 +1,34 @@
+title: Persistence Via Registry Run Key Modification
+id: e0ac405e-e965-577c-bc36-27ce67defa1d
+status: experimental
+description: Detects writes to Run/RunOnce autostart keys pointing at suspicious paths (Atomic T1547.001). Uses Sysmon EventID 13.
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1547/001/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.persistence
+    - attack.t1547.001
+logsource:
+    category: registry_set
+    product: windows
+detection:
+    selection:
+        EventType: SetValue
+        TargetObject|contains:
+            - '\\CurrentVersion\\Run\\'
+            - '\\CurrentVersion\\RunOnce\\'
+    selection_path:
+        Details|contains:
+            - '\\AppData\\'
+            - '\\Temp\\'
+            - '\\Users\\Public\\'
+            - 'powershell'
+            - 'cmd.exe'
+            - '.vbs'
+            - '.js'
+    condition: selection and selection_path
+falsepositives:
+    - Legitimate applications installing autostart entries from their install directory (excluded by requiring suspicious paths).
+level: medium

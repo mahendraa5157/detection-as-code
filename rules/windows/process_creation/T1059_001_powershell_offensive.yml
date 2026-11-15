@@ -1,0 +1,40 @@
+title: PowerShell Execution Of Offensive Tooling Or Encoded Commands
+id: e2306df7-6ec9-51de-8e65-22520cf50ec6
+status: experimental
+description: Detects PowerShell launching known offensive modules (Mimikatz, PowerSploit) or using base64-encoded commands, a common evasion pattern used by Atomic Red Team T1059.001 and real intrusions.
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1059/001/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.execution
+    - attack.t1059.001
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection_proc:
+        Image|endswith:
+            - '\\powershell.exe'
+            - '\\pwsh.exe'
+    selection_offensive:
+        CommandLine|contains:
+            - 'Invoke-Mimikatz'
+            - 'Invoke-Expression (New-Object'
+            - 'IEX (New-Object'
+            - 'DownloadString('
+            - '-DumpCreds'
+            - 'PowerSploit'
+            - '-enc '
+            - '-EncodedCommand'
+            - 'FromBase64String('
+    filter_dsc:
+        CommandLine|contains:
+            - '\\SoftwareDistribution\\'
+            - 'Get-WindowsUpdateLog'
+    condition: selection_proc and selection_offensive and not filter_dsc
+falsepositives:
+    - Software deployment frameworks (SCCM, PDQ) that legitimately pass base64-encoded payloads.
+    - Administrators using Invoke-Expression with internal module repositories.
+level: high

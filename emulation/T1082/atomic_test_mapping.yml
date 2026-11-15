@@ -1,0 +1,6 @@
+technique: 'T1082'
+rule: 'rules/windows/process_creation/T1082_system_information_discovery.yml'
+atomic_test:
+    name: 'System info'
+    auto_generated_guid_or_num: 'T1082-1'
+    example_command: 'systeminfo'

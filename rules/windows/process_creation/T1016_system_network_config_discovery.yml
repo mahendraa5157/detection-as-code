@@ -1,0 +1,34 @@
+title: System Network Configuration Discovery
+id: 0cc901f5-4079-5b6b-881a-0576036a7bde
+status: experimental
+description: Detects network reconnaissance via ipconfig /all, arp -a, route print, nbtstat (Atomic T1016).
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1016/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.discovery
+    - attack.t1016
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection_tools:
+        Image|endswith:
+            - '\\ipconfig.exe'
+            - '\\arp.exe'
+            - '\\route.exe'
+            - '\\nbtstat.exe'
+            - '\\netsh.exe'
+    selection_args:
+        CommandLine|contains:
+            - ' /all'
+            - ' -a'
+            - ' print'
+            - 'interface show'
+    condition: selection_tools and selection_args
+falsepositives:
+    - Routine troubleshooting by help desk and users.
+    - Login scripts that log network configuration.
+level: low

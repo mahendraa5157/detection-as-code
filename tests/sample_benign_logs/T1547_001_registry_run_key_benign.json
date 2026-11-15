@@ -1,0 +1,8 @@
+{
+  "EventID": 13,
+  "EventType": "SetValue",
+  "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\Steam",
+  "Details": "\"C:\\Program Files (x86)\\Steam\\steam.exe\" -silent",
+  "Image": "C:\\Program Files (x86)\\Steam\\steam.exe",
+  "_provenance": "synthetic"
+}

@@ -1,0 +1,8 @@
+{
+  "EventID": 1,
+  "Image": "C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe",
+  "CommandLine": "\"SystemSettings.exe\"",
+  "ParentImage": "C:\\Windows\\System32\\fodhelper.exe",
+  "User": "VICTIM-PC\\analyst",
+  "_provenance": "synthetic"
+}

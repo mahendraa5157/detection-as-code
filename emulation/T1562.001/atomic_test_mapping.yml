@@ -1,0 +1,6 @@
+technique: 'T1562.001'
+rule: 'rules/windows/process_creation/T1562_001_disable_defender.yml'
+atomic_test:
+    name: 'Disable Defender'
+    auto_generated_guid_or_num: 'T1562.001-1'
+    example_command: 'Set-MpPreference -DisableRealtimeMonitoring $true'

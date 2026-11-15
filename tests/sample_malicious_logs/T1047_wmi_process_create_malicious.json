@@ -1,0 +1,8 @@
+{
+  "EventID": 1,
+  "Image": "C:\\Windows\\System32\\wbem\\WMIC.exe",
+  "CommandLine": "wmic.exe /node:WORKSTATION01 process call create \"cmd.exe /c powershell -enc <b64>\"",
+  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+  "User": "VICTIM-PC\\analyst",
+  "_provenance": "synthetic"
+}

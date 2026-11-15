@@ -1,0 +1,29 @@
+title: LSASS Memory Dump Via Comsvcs Or Procdump
+id: 5d6f55f8-8232-5b93-8361-d15a20e6e2b9
+status: experimental
+description: Detects credential dumping from LSASS using comsvcs.dll MiniDump or procdump (Atomic T1003.001).
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1003/001/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.credential_access
+    - attack.t1003.001
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection_comsvcs:
+        CommandLine|contains|all:
+            - 'comsvcs.dll'
+            - 'MiniDump'
+    selection_procdump:
+        Image|endswith: '\\procdump.exe'
+        CommandLine|contains:
+            - 'lsass'
+            - '-ma '
+    condition: selection_comsvcs or selection_procdump
+falsepositives:
+    - Sysadmins intentionally dumping LSASS for crash analysis with procdump (rare, should be ticketed).
+level: high

@@ -1,0 +1,8 @@
+{
+  "EventID": 1,
+  "Image": "C:\\Windows\\System32\\cmd.exe",
+  "CommandLine": "cmd.exe /c echo build >> log.txt",
+  "ParentImage": "C:\\Windows\\explorer.exe",
+  "User": "VICTIM-PC\\analyst",
+  "_provenance": "synthetic"
+}

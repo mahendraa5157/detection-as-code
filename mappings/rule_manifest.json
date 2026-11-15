@@ -1,0 +1,262 @@
+[
+  {
+    "tid": "T1059.001",
+    "fileid": "T1059_001_powershell_offensive",
+    "folder": "process_creation",
+    "title": "PowerShell Execution Of Offensive Tooling Or Encoded Commands",
+    "tactic": "execution",
+    "level": "high",
+    "atomic": "T1059.001-1",
+    "confidence": "High"
+  },
+  {
+    "tid": "T1059.003",
+    "fileid": "T1059_003_windows_command_shell",
+    "folder": "process_creation",
+    "title": "Suspicious Windows Command Shell Child Of Office Application",
+    "tactic": "execution",
+    "level": "medium",
+    "atomic": "T1059.003-1",
+    "confidence": "High"
+  },
+  {
+    "tid": "T1053.005",
+    "fileid": "T1053_005_scheduled_task_creation",
+    "folder": "process_creation",
+    "title": "Scheduled Task Creation Via Schtasks",
+    "tactic": "persistence",
+    "level": "medium",
+    "atomic": "T1053.005-1",
+    "confidence": "Medium"
+  },
+  {
+    "tid": "T1003.001",
+    "fileid": "T1003_001_lsass_memory_dump",
+    "folder": "process_creation",
+    "title": "LSASS Memory Dump Via Comsvcs Or Procdump",
+    "tactic": "credential_access",
+    "level": "high",
+    "atomic": "T1003.001-1",
+    "confidence": "High"
+  },
+  {
+    "tid": "T1021.001",
+    "fileid": "T1021_001_rdp_enable",
+    "folder": "process_creation",
+    "title": "Remote Desktop Enabled Via Registry From Command Line",
+    "tactic": "lateral_movement",
+    "level": "medium",
+    "atomic": "T1021.001-1",
+    "confidence": "Medium"
+  },
+  {
+    "tid": "T1218.011",
+    "fileid": "T1218_011_rundll32_proxy_exec",
+    "folder": "process_creation",
+    "title": "Rundll32 Proxy Execution Of Suspicious Payloads",
+    "tactic": "defense_evasion",
+    "level": "medium",
+    "atomic": "T1218.011-1",
+    "confidence": "Medium"
+  },
+  {
+    "tid": "T1218.010",
+    "fileid": "T1218_010_regsvr32_scrobj",
+    "folder": "process_creation",
+    "title": "Regsvr32 Squiblydoo Scriptlet Execution",
+    "tactic": "defense_evasion",
+    "level": "high",
+    "atomic": "T1218.010-1",
+    "confidence": "High"
+  },
+  {
+    "tid": "T1218.005",
+    "fileid": "T1218_005_mshta_execution",
+    "folder": "process_creation",
+    "title": "Mshta Execution Of Remote Or Inline Script",
+    "tactic": "defense_evasion",
+    "level": "high",
+    "atomic": "T1218.005-1",
+    "confidence": "High"
+  },
+  {
+    "tid": "T1105",
+    "fileid": "T1105_ingress_tool_transfer_certutil",
+    "folder": "process_creation",
+    "title": "Ingress Tool Transfer Via Certutil Or Bitsadmin Download",
+    "tactic": "command_and_control",
+    "level": "high",
+    "atomic": "T1105-1",
+    "confidence": "High"
+  },
+  {
+    "tid": "T1047",
+    "fileid": "T1047_wmi_process_create",
+    "folder": "process_creation",
+    "title": "WMI Process Creation Via Wmic",
+    "tactic": "execution",
+    "level": "medium",
+    "atomic": "T1047-1",
+    "confidence": "Medium"
+  },
+  {
+    "tid": "T1070.001",
+    "fileid": "T1070_001_clear_event_logs",
+    "folder": "process_creation",
+    "title": "Windows Event Log Cleared Via Wevtutil Or PowerShell",
+    "tactic": "defense_evasion",
+    "level": "high",
+    "atomic": "T1070.001-1",
+    "confidence": "High"
+  },
+  {
+    "tid": "T1136.001",
+    "fileid": "T1136_001_create_local_account",
+    "folder": "process_creation",
+    "title": "Local Account Creation Via Net User",
+    "tactic": "persistence",
+    "level": "medium",
+    "atomic": "T1136.001-1",
+    "confidence": "Medium"
+  },
+  {
+    "tid": "T1548.002",
+    "fileid": "T1548_002_uac_bypass_fodhelper",
+    "folder": "process_creation",
+    "title": "UAC Bypass Via Fodhelper Registry Hijack",
+    "tactic": "privilege_escalation",
+    "level": "high",
+    "atomic": "T1548.002-3",
+    "confidence": "High"
+  },
+  {
+    "tid": "T1016",
+    "fileid": "T1016_system_network_config_discovery",
+    "folder": "process_creation",
+    "title": "System Network Configuration Discovery",
+    "tactic": "discovery",
+    "level": "low",
+    "atomic": "T1016-1",
+    "confidence": "Low"
+  },
+  {
+    "tid": "T1057",
+    "fileid": "T1057_process_discovery",
+    "folder": "process_creation",
+    "title": "Process Discovery Via Tasklist Or Get-Process",
+    "tactic": "discovery",
+    "level": "low",
+    "atomic": "T1057-1",
+    "confidence": "Low"
+  },
+  {
+    "tid": "T1082",
+    "fileid": "T1082_system_information_discovery",
+    "folder": "process_creation",
+    "title": "System Information Discovery Via Systeminfo",
+    "tactic": "discovery",
+    "level": "low",
+    "atomic": "T1082-1",
+    "confidence": "Low"
+  },
+  {
+    "tid": "T1087.001",
+    "fileid": "T1087_001_local_account_discovery",
+    "folder": "process_creation",
+    "title": "Local Account Discovery Via Net User",
+    "tactic": "discovery",
+    "level": "low",
+    "atomic": "T1087.001-1",
+    "confidence": "Low"
+  },
+  {
+    "tid": "T1069.001",
+    "fileid": "T1069_001_local_group_discovery",
+    "folder": "process_creation",
+    "title": "Local Permission Group Discovery",
+    "tactic": "discovery",
+    "level": "low",
+    "atomic": "T1069.001-1",
+    "confidence": "Low"
+  },
+  {
+    "tid": "T1490",
+    "fileid": "T1490_inhibit_system_recovery",
+    "folder": "process_creation",
+    "title": "Inhibit System Recovery Via Shadow Copy Deletion",
+    "tactic": "impact",
+    "level": "high",
+    "atomic": "T1490-1",
+    "confidence": "High"
+  },
+  {
+    "tid": "T1562.001",
+    "fileid": "T1562_001_disable_defender",
+    "folder": "process_creation",
+    "title": "Impair Defenses - Disable Microsoft Defender",
+    "tactic": "defense_evasion",
+    "level": "high",
+    "atomic": "T1562.001-1",
+    "confidence": "High"
+  },
+  {
+    "tid": "T1197",
+    "fileid": "T1197_bits_jobs",
+    "folder": "process_creation",
+    "title": "BITS Job Used For Download Or Persistence",
+    "tactic": "defense_evasion",
+    "level": "medium",
+    "atomic": "T1197-1",
+    "confidence": "Medium"
+  },
+  {
+    "tid": "T1140",
+    "fileid": "T1140_deobfuscate_certutil_decode",
+    "folder": "process_creation",
+    "title": "Deobfuscate/Decode Files Via Certutil Decode",
+    "tactic": "defense_evasion",
+    "level": "medium",
+    "atomic": "T1140-1",
+    "confidence": "Medium"
+  },
+  {
+    "tid": "T1027",
+    "fileid": "T1027_obfuscated_powershell_flags",
+    "folder": "process_creation",
+    "title": "Obfuscated PowerShell Via Stacked Evasion Flags",
+    "tactic": "defense_evasion",
+    "level": "medium",
+    "atomic": "T1027-1",
+    "confidence": "Medium"
+  },
+  {
+    "tid": "T1547.001",
+    "fileid": "T1547_001_registry_run_key",
+    "folder": "registry_set",
+    "title": "Persistence Via Registry Run Key Modification",
+    "tactic": "persistence",
+    "level": "medium",
+    "atomic": "T1547.001-1",
+    "confidence": "Medium"
+  },
+  {
+    "tid": "T1112",
+    "fileid": "T1112_modify_registry_disable_security",
+    "folder": "process_creation",
+    "title": "Registry Tampering To Disable Security Controls",
+    "tactic": "defense_evasion",
+    "level": "high",
+    "atomic": "T1112-1",
+    "confidence": "High"
+  },
+  {
+    "tid": "T1033",
+    "fileid": "T1033_system_owner_user_discovery",
+    "folder": "process_creation",
+    "title": "System Owner/User Discovery Via Whoami",
+    "tactic": "discovery",
+    "level": "low",
+    "atomic": "T1033-1",
+    "confidence": "Low"
+  }
+]

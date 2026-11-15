@@ -1,0 +1,6 @@
+technique: 'T1027'
+rule: 'rules/windows/process_creation/T1027_obfuscated_powershell_flags.yml'
+atomic_test:
+    name: 'Obfuscated flags'
+    auto_generated_guid_or_num: 'T1027-1'
+    example_command: 'powershell -w hidden -ep bypass -enc ...'

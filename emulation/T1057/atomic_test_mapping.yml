@@ -1,0 +1,6 @@
+technique: 'T1057'
+rule: 'rules/windows/process_creation/T1057_process_discovery.yml'
+atomic_test:
+    name: 'Process discovery'
+    auto_generated_guid_or_num: 'T1057-1'
+    example_command: 'tasklist /v'

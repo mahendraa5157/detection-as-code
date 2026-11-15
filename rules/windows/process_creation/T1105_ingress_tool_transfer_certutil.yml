@@ -1,0 +1,33 @@
+title: Ingress Tool Transfer Via Certutil Or Bitsadmin Download
+id: 26f6acf2-adb8-5309-bba5-14005ec55d2b
+status: experimental
+description: Detects file download using certutil -urlcache or bitsadmin /transfer, common LOLBin ingress (Atomic T1105).
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1105/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.command_and_control
+    - attack.t1105
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection_certutil_img:
+        Image|endswith: '\\certutil.exe'
+    selection_certutil_verb:
+        CommandLine|contains:
+            - 'urlcache'
+            - 'verifyctl'
+    selection_certutil_url:
+        CommandLine|contains:
+            - 'http://'
+            - 'https://'
+    selection_bits:
+        Image|endswith: '\\bitsadmin.exe'
+        CommandLine|contains: '/transfer'
+    condition: (all of selection_certutil_*) or selection_bits
+falsepositives:
+    - certutil used by scripts for legitimate certificate retrieval over HTTP (uncommon).
+level: high

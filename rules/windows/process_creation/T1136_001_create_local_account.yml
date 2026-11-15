@@ -1,0 +1,27 @@
+title: Local Account Creation Via Net User
+id: bdb795d9-c927-5cb1-aba1-1342bb4b7c3b
+status: experimental
+description: Detects creation of a local user account via net.exe user /add (Atomic T1136.001).
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1136/001/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.persistence
+    - attack.t1136.001
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith:
+            - '\\net.exe'
+            - '\\net1.exe'
+        CommandLine|contains|all:
+            - 'user'
+            - '/add'
+    condition: selection
+falsepositives:
+    - Provisioning scripts that create service or local admin accounts.
+level: medium

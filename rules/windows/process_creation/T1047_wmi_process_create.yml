@@ -1,0 +1,26 @@
+title: WMI Process Creation Via Wmic
+id: 06d42a2e-acbd-563c-93f1-ba7249a13c5e
+status: experimental
+description: Detects process execution via 'wmic process call create', used for execution and lateral movement (Atomic T1047).
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1047/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.execution
+    - attack.t1047
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith: '\\wmic.exe'
+        CommandLine|contains|all:
+            - 'process'
+            - 'call'
+            - 'create'
+    condition: selection
+falsepositives:
+    - Legacy management scripts that launch processes through WMIC.
+level: medium

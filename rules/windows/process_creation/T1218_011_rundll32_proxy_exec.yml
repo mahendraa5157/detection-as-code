@@ -1,0 +1,32 @@
+title: Rundll32 Proxy Execution Of Suspicious Payloads
+id: 00742ff3-18ea-5816-82a2-7d86fe3fc474
+status: experimental
+description: Detects rundll32 used to proxy-execute JavaScript or remote/temp DLLs (Atomic T1218.011).
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1218/011/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.defense_evasion
+    - attack.t1218.011
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith: '\\rundll32.exe'
+    selection_sus:
+        CommandLine|contains:
+            - 'javascript:'
+            - 'RunHTMLApplication'
+            - '\\AppData\\'
+            - '\\Temp\\'
+            - 'http://'
+            - 'https://'
+    filter_empty:
+        CommandLine|endswith: 'rundll32.exe'
+    condition: selection and selection_sus and not filter_empty
+falsepositives:
+    - Rare installers that stage DLLs in %TEMP% and invoke them via rundll32.
+level: medium

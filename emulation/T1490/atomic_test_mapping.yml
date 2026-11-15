@@ -1,0 +1,6 @@
+technique: 'T1490'
+rule: 'rules/windows/process_creation/T1490_inhibit_system_recovery.yml'
+atomic_test:
+    name: 'Delete shadows'
+    auto_generated_guid_or_num: 'T1490-1'
+    example_command: 'vssadmin delete shadows /all /quiet'

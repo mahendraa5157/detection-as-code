@@ -1,0 +1,6 @@
+technique: 'T1016'
+rule: 'rules/windows/process_creation/T1016_system_network_config_discovery.yml'
+atomic_test:
+    name: 'Network discovery'
+    auto_generated_guid_or_num: 'T1016-1'
+    example_command: 'ipconfig /all; arp -a; route print'

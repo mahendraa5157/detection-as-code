@@ -1,0 +1,6 @@
+technique: 'T1547.001'
+rule: 'rules/windows/registry_set/T1547_001_registry_run_key.yml'
+atomic_test:
+    name: 'Run key persistence'
+    auto_generated_guid_or_num: 'T1547.001-1'
+    example_command: 'reg add HKCU\...\Run /v ... /d <payload>'

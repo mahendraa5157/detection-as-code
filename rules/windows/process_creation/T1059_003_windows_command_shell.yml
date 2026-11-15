@@ -1,0 +1,27 @@
+title: Suspicious Windows Command Shell Child Of Office Application
+id: e1cf81b7-b37b-505b-aa2e-b00b67910518
+status: experimental
+description: Detects cmd.exe spawned by an Office application, a hallmark of malicious macro execution (Atomic T1059.003).
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1059/003/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.execution
+    - attack.t1059.003
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith: '\\cmd.exe'
+        ParentImage|endswith:
+            - '\\winword.exe'
+            - '\\excel.exe'
+            - '\\powerpnt.exe'
+            - '\\outlook.exe'
+    condition: selection
+falsepositives:
+    - Office add-ins or templates that legitimately shell out for document automation.
+level: medium

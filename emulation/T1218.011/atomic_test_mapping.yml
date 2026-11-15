@@ -1,0 +1,6 @@
+technique: 'T1218.011'
+rule: 'rules/windows/process_creation/T1218_011_rundll32_proxy_exec.yml'
+atomic_test:
+    name: 'rundll32 JS'
+    auto_generated_guid_or_num: 'T1218.011-1'
+    example_command: 'rundll32 javascript:...RunHTMLApplication'

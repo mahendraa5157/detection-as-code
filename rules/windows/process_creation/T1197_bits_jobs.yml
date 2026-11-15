@@ -1,0 +1,27 @@
+title: BITS Job Used For Download Or Persistence
+id: 71232c86-5c7c-530d-b4e6-1737b342df14
+status: experimental
+description: Detects use of bitsadmin to create transfer jobs for stealthy download/persistence (Atomic T1197).
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1197/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.defense_evasion
+    - attack.t1197
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith: '\\bitsadmin.exe'
+        CommandLine|contains:
+            - '/create'
+            - '/addfile'
+            - '/SetNotifyCmdLine'
+            - '/transfer'
+    condition: selection
+falsepositives:
+    - Legitimate software updaters that use BITS (Windows Update, some installers).
+level: medium

@@ -1,0 +1,29 @@
+title: Windows Event Log Cleared Via Wevtutil Or PowerShell
+id: 83823c38-b1f8-5c7f-81a8-de439b18ff2a
+status: experimental
+description: Detects clearing of Windows event logs via wevtutil cl or Clear-EventLog (Atomic T1070.001).
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1070/001/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.defense_evasion
+    - attack.t1070.001
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection_wevtutil:
+        Image|endswith: '\\wevtutil.exe'
+        CommandLine|contains:
+            - ' cl '
+            - ' clear-log '
+    selection_ps:
+        CommandLine|contains:
+            - 'Clear-EventLog'
+            - '.ClearEventLog('
+    condition: selection_wevtutil or selection_ps
+falsepositives:
+    - Log rotation or forensic cleanup scripts in test environments (should be rare on production).
+level: high

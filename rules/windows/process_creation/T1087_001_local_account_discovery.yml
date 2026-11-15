@@ -1,0 +1,30 @@
+title: Local Account Discovery Via Net User
+id: 7b854507-7fc8-560e-865c-e2fcbc10eae2
+status: experimental
+description: Detects enumeration of local accounts via net user / net accounts (Atomic T1087.001).
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1087/001/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.discovery
+    - attack.t1087.001
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith:
+            - '\\net.exe'
+            - '\\net1.exe'
+        CommandLine|contains:
+            - 'user'
+            - 'accounts'
+    filter_add:
+        CommandLine|contains: '/add'
+    condition: selection and not filter_add
+falsepositives:
+    - Admins checking account state.
+    - Login scripts that query account policy.
+level: low

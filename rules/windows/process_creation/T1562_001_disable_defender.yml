@@ -1,0 +1,27 @@
+title: Impair Defenses - Disable Microsoft Defender
+id: 31992e33-5084-5dea-ab0b-38a6f3fd653d
+status: experimental
+description: Detects disabling of Microsoft Defender real-time protection via Set-MpPreference or exclusion additions (Atomic T1562.001).
+references:
+    - https://github.com/mahendraa5157/detection-as-code
+    - https://attack.mitre.org/techniques/T1562/001/
+author: mahendra / Detection-as-Code Lab
+date: 2026/11/15
+tags:
+    - attack.defense_evasion
+    - attack.t1562.001
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine|contains:
+            - 'Set-MpPreference -DisableRealtimeMonitoring $true'
+            - 'DisableRealtimeMonitoring 1'
+            - 'Add-MpPreference -ExclusionPath'
+            - 'DisableBehaviorMonitoring $true'
+            - 'DisableIOAVProtection $true'
+    condition: selection
+falsepositives:
+    - Security teams adding sanctioned Defender exclusions during software rollout.
+level: high

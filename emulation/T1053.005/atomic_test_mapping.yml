@@ -1,0 +1,6 @@
+technique: 'T1053.005'
+rule: 'rules/windows/process_creation/T1053_005_scheduled_task_creation.yml'
+atomic_test:
+    name: 'Scheduled task persistence'
+    auto_generated_guid_or_num: 'T1053.005-1'
+    example_command: 'schtasks /create /tn ... /tr ...'
